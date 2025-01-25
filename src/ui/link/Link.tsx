@@ -12,7 +12,7 @@ export function Link(props: IProps) {
 
   const fontStyles = 'text-black text-base font-normal tracking-tightest';
 
-  const classNames = cn(className, fontStyles);
+  const classNames = cn(fontStyles, className);
 
   return (
     <NextLink {...restProps} className={classNames}>

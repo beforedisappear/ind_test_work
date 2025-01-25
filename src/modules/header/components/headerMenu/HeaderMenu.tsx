@@ -18,7 +18,7 @@ export function HeaderMenu({}: Props) {
   return (
     <div ref={ref} className='flex relative'>
       <Button
-        className='hidden sm:block'
+        className='hidden sm:flex'
         onClick={() => setShowMenu(showMenu => !showMenu)}
       >
         Меню
@@ -28,7 +28,7 @@ export function HeaderMenu({}: Props) {
         className={cn(
           `flex w-full gap-x-6 max-w-[244px]
           sm:hidden sm:bg-gray sm:w-40 sm:flex-col
-          sm:absolute sm:top-[115%] sm:right-0 sm:z-1 sm:p-1 sm:rounded-md sm:gap-y-2 sm:shadow`,
+          sm:absolute sm:top-[115%] sm:right-0 sm:z-10 sm:p-1 sm:rounded-md sm:gap-y-2 sm:shadow`,
           { 'sm:flex': showMenu },
         )}
       >
@@ -43,6 +43,13 @@ export function HeaderMenu({}: Props) {
             </li>
           );
         })}
+
+        <li
+          className='hidden justify-center items-center flex-grow
+          sm:flex'
+        >
+          <Link href={'#'}>Вход</Link>
+        </li>
       </ul>
     </div>
   );

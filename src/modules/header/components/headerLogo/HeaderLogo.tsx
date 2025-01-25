@@ -1,4 +1,4 @@
-import Logo from '../../assets/icons/logo.svgr';
+import Logo from '@/assets/icons/logo.svgr';
 
 import { Link } from '@/ui';
 

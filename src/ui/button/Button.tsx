@@ -10,8 +10,8 @@ export function Button(props: Props) {
   const { children, className, ...restProps } = props;
 
   const classNames = cn(
+    'flex items-center bg-black text-lightFontColor py-1 px-2 rounded h-[28px]',
     className,
-    'bg-black text-lightFontColor py-1 px-2 rounded h-[28px]',
   );
 
   return (

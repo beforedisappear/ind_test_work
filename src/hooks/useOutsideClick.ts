@@ -15,10 +15,13 @@ export const useOutsideClick = (
   //focuseout event leads to double rerender
   //due to double setState call
   useEffect(() => {
-    document.addEventListener('click', handleClick);
+    let controller = new AbortController();
+    let signal = controller.signal;
+
+    document.addEventListener('click', handleClick, { signal });
 
     return () => {
-      document.removeEventListener('click', handleClick);
+      controller.abort();
     };
   }, [callback]);
 };

@@ -1,0 +1,62 @@
+/* .active {
+  width: 40px;
+  position: relative;
+  transition: width 0.3s ease;
+}
+
+.active {
+  width: 40px;
+  position: relative;
+  transition: width 0.3s ease;
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 9999px;
+  background: var(--black-color);
+  animation: slide-left 0.3s ease-in-out forwards;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+} */
+
+.active {
+  width: 40px;
+  position: relative;
+  transition: width 0.3s ease;
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 9999px;
+  background: var(--black-color);
+}
+
+.active.sliding::before {
+  animation: slide-left 0.3s ease-in-out forwards;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0); /* Начальное положение */
+  }
+  100% {
+    transform: translateX(100%); /* Конечное положение */
+  }
+}

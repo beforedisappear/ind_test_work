@@ -1,11 +1,11 @@
 import { Hero } from '@/modules/hero';
-import { Caraousel } from '@/components/carousel/Caraousel';
+import { Carousel } from '@/components/carousel/Carousel';
 
 export default function HomePage() {
   return (
-    <>
+    <div className='flex flex-col gap-10'>
       <Hero />
-      <Caraousel />
-    </>
+      <Carousel />
+    </div>
   );
 }
